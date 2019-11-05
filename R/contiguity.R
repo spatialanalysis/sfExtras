@@ -66,8 +66,8 @@ st_as_nb <- function(sgbp, ...) {
 #'
 #' plot(rook_nb, coords, lwd=.2, col="blue", cex = .5)
 st_centroid_coords <- function(x) {
-  longitude <- purrr::map_dbl(x$geometry, ~sf::st_centroid(.x)[[1]])
-  latitude <- purrr::map_dbl(x$geometry, ~sf::st_centroid(.x)[[2]])
+  longitude <- vapply(x$geometry, function(x) sf::st_centroid(x)[[1]], FUN.VALUE = double(1))
+  latitude <- vapply(x$geometry, function(x) sf::st_centroid(x)[[2]], FUN.VALUE = double(1))
   coords <- cbind(longitude, latitude)
 
   coords
