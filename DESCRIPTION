@@ -15,7 +15,8 @@ LazyData: true
 RoxygenNote: 6.1.1
 Imports: 
     sf,
-    purrr
+    purrr,
+    spdep
 Suggests: 
     geodaData,
     sp
