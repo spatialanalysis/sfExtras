@@ -13,9 +13,10 @@ st_as_nb(sgbp, ...)
 Convert sparse geometric binary objects to nb objects
 }
 \examples{
-ncovr_rook_nb <- st_as_nb(ncovr_rook)
+ncovr_rook <- st_rook(ncovr)
+rook_nb <- st_as_nb(ncovr_rook)
 
-str(ncovr_rook_nb)
-summary(ncovr_rook_nb)
-class(ncovr_rook_nb)
+str(rook_nb)
+summary(rook_nb)
+class(rook_nb)
 }
