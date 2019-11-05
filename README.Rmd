@@ -4,7 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE, eval = FALSE}
+```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -40,7 +40,7 @@ remotes::install_github("spatialanalysis/sfExtras")
 
 Load the sfExtras library, then start making contiguity weights:
 
-```{r weights}
+```{r weights, eval=FALSE}
 library(sf)
 library(sfExtras)
 library(geodaData)
@@ -51,6 +51,6 @@ ncovr_queen <- st_queen(ncovr)
 
 Convert into **nb** class for use with the spdep package:
 
-```{r as_nb}
+```{r as_nb, eval=FALSE}
 rook_nb <- st_as_nb(ncovr_rook)
 ```

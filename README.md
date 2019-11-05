@@ -36,24 +36,12 @@ Load the sfExtras library, then start making contiguity weights:
 
 ``` r
 library(sf)
-```
-
-    ## Linking to GEOS 3.7.2, GDAL 2.4.2, PROJ 5.2.0
-
-``` r
 library(sfExtras)
 library(geodaData)
 
 ncovr_rook <- st_rook(ncovr)
-```
-
-    ## although coordinates are longitude/latitude, st_relate_pattern assumes that they are planar
-
-``` r
 ncovr_queen <- st_queen(ncovr)
 ```
-
-    ## although coordinates are longitude/latitude, st_relate_pattern assumes that they are planar
 
 Convert into **nb** class for use with the spdep package:
 
