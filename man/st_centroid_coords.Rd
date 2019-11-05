@@ -9,6 +9,9 @@ st_centroid_coords(x)
 \arguments{
 \item{x}{sf object}
 }
+\value{
+matrix of lon/lat coordinates
+}
 \description{
 Extract centroid coordinates as a matrix of an sf polygon object for plotting a connectivity graph
 }

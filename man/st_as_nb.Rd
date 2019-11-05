@@ -4,10 +4,13 @@
 \alias{st_as_nb}
 \title{Convert sparse geometric binary objects to nb objects}
 \usage{
-st_as_nb(sgbp, ...)
+st_as_nb(sgbp)
 }
 \arguments{
 \item{sgbp}{sparse geometric binary object, returned by st_rook or st_queen}
+}
+\value{
+nb object
 }
 \description{
 Convert sparse geometric binary objects to nb objects

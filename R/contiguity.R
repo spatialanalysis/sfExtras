@@ -3,7 +3,7 @@
 #' @param a sf object
 #' @param b (optional) sf object
 #'
-#' @return
+#' @return sgbp object representing neighbors from rook contiguity
 #' @export
 #'
 #' @examples
@@ -19,7 +19,7 @@ st_rook <- function(a, b = a) {
 #' @param a sf object
 #' @param b (optional) sf object
 #'
-#' @return
+#' @return sgbp object representing neighbors from queen contiguity
 #' @export
 #'
 #' @examples
@@ -34,7 +34,7 @@ st_queen <- function(a, b = a) {
 #'
 #' @param sgbp sparse geometric binary object, returned by st_rook or st_queen
 #'
-#' @return
+#' @return nb object
 #' @export
 #'
 #' @examples
@@ -44,7 +44,7 @@ st_queen <- function(a, b = a) {
 #' str(rook_nb)
 #' summary(rook_nb)
 #' class(rook_nb)
-st_as_nb <- function(sgbp, ...) {
+st_as_nb <- function(sgbp) {
   attrs <- attributes(sgbp)
   sgbp <- lapply(sgbp, function(i) { if(length(i) == 0L) 0L else i } )
   attributes(sgbp) <- attrs
@@ -56,7 +56,7 @@ st_as_nb <- function(sgbp, ...) {
 #'
 #' @param x sf object
 #'
-#' @return
+#' @return matrix of lon/lat coordinates
 #' @export
 #'
 #' @examples

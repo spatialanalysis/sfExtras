@@ -11,6 +11,9 @@ st_rook(a, b = a)
 
 \item{b}{(optional) sf object}
 }
+\value{
+sgbp object representing neighbors from rook contiguity
+}
 \description{
 Create rook contiguity weights from sf objects
 }

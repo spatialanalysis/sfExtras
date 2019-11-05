@@ -11,6 +11,9 @@ st_queen(a, b = a)
 
 \item{b}{(optional) sf object}
 }
+\value{
+sgbp object representing neighbors from queen contiguity
+}
 \description{
 Create queen contiguity weights from sf objects
 }
